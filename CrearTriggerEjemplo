@@ -1,0 +1,14 @@
+create TRIGGER copiaInformacion
+ on dbo.usuarios
+ for insert
+ as
+ begin
+ --CODIGO A EJECUTAR
+  insert into  usuariosresp select * from inserted
+ SET NOCOUNT ON
+ END
+
+
+ --insert into Usuarios values(2,'asd',17)
+ --select * from usuariosResp
+ --select * from usuarios
